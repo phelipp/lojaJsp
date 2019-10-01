@@ -32,6 +32,7 @@ public class Client implements ObjectDatabase {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column(unique = true)
     private String cpf;
     private String name;
     @Column(name = "last_name")
@@ -83,46 +84,7 @@ public class Client implements ObjectDatabase {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-/*
-    public List<Pedido> getPedido() {
-        return pedido;
-    }
 
-    public void setPedido(List<Pedido> pedido) {
-        this.pedido = pedido;
-    }
-
-    public List<Address> getAddress() {
-        return address;
-    }
-
-    public void setAddress(List<Address> address) {
-        this.address = address;
-    }
-
-    public List<Phone> getPhones() {
-        return phones;
-    }
-
-    public void setPhones(List<Phone> phones) {
-        this.phones = phones;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Login getLogin() {
-        return login;
-    }
-
-    public void setLogin(Login login) {
-        this.login = login;
-    }*/
     
     
 }
